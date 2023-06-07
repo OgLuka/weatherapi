@@ -101,6 +101,7 @@ export default function Home() {
     //check if input value is empty
     if ( city.trim() === '' ) {
       setError('Please enter a city')
+      setWeatherInfo(null)
       return
     }
 
@@ -129,12 +130,11 @@ export default function Home() {
         </div>
       </form>
 
-        {
-          error != '' && <p className='text-red-500 mt-4'>{error}</p>
-        }
+      {
+        error != '' && <p className='text-red-500 mt-4'>{error}</p>
+      }
 
-        <WeatherInfo weather={weatherInfo}/>
-        
+      <WeatherInfo weather={weatherInfo}/>
    </div>
   )
 }

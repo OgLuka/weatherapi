@@ -82,7 +82,7 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
                 transition={{ duration: .5, delay: 0.1 * index, type: 'spring' }}
                 exit={{ opacity: 0, y: 10, transition: { delay: .05 * index, type: 'spring', duration: .2 } }}
                 key={index} 
-                className='flex items-center gap-4 py-2 px-4 bg-green-400 bg-opacity-70 rounded justify-center hover:bg-cyan-500 transition-all duration-500'>
+                className='flex items-center mobile:gap-2 mobile:px-2 mobile:py-1 gap-4 py-2 px-4 bg-green-400 bg-opacity-70 rounded justify-center hover:bg-cyan-500 transition-all duration-500'>
                 <div className='flex items-center gap-4 mobile:gap-2'>
                   <label className='p-3 bg-slate-900 rounded mobile:text-sm mobile:p-2'>{data.name.toUpperCase()}</label>
                   <span className='text-xl mobile:text-base'>{data.value}</span>
