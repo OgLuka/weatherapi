@@ -80,7 +80,7 @@ export default function Home() {
   const getCurrentCity = async (latitude: number, longitude: number) => {
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
       )
 
       const data = await response.data;
