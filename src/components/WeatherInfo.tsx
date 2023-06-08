@@ -77,7 +77,7 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
           {
             weatherData?.map((data, index) => (
               if (data.value)
-              return <motion.div 
+              return (<motion.div 
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: .5, delay: 0.1 * index, type: 'spring' }}
@@ -89,7 +89,7 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
                   <span className='text-xl mobile:text-base'>{data.value}</span>
                 </div>
                 <Image src={data.icon} width={60} height={60} alt='weather icon'/>
-              </motion.div>
+              </motion.div>)
             ))
           }
         </AnimatePresence>
