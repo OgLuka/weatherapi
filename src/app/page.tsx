@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import WeatherInfo from '../components/WeatherInfo';
 import axios from 'axios';
-import { type } from 'os';
 
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
