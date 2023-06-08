@@ -76,7 +76,8 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
         <AnimatePresence>
           {
             weatherData?.map((data, index) => (
-              <motion.div 
+              if (data.value)
+              return <motion.div 
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: .5, delay: 0.1 * index, type: 'spring' }}
