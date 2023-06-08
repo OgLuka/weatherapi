@@ -75,8 +75,8 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
       <div className='flex flex-col items-start justify-start mt-12 gap-2 mb-10'>
         <AnimatePresence>
           {
-            weatherData?.map((data, index) => (
-              if (data.value)
+            weatherData?.map((data, index) => {
+              if (data.value) {
               return (<motion.div 
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,8 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
                 </div>
                 <Image src={data.icon} width={60} height={60} alt='weather icon'/>
               </motion.div>)
-            ))
+              }
+            )}
           }
         </AnimatePresence>
       </div>
