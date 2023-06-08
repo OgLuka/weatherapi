@@ -91,7 +91,7 @@ export default function WeatherInfo({ weather }: WeatherInfoProps) {
                 <Image src={data.icon} width={60} height={60} alt='weather icon'/>
               </motion.div>)
               }
-            )}
+            })
           }
         </AnimatePresence>
       </div>
